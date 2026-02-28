@@ -1,58 +1,111 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
 }
 
+/* Navbar */
 .navbar {
-    background: #333;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
+  background: #0a1f44;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Hero Section */
 .hero {
-    text-align: center;
-    padding: 80px;
-    background: #f4f4f4;
+  height: 100vh;
+  background: linear-gradient(rgba(10,31,68,0.8), rgba(10,31,68,0.8)),
+              url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.features {
-    padding: 40px;
-    text-align: center;
+.hero h1 {
+  font-size: 40px;
 }
 
-.feature-list {
-    display: flex;
-    justify-content: space-around;
+.hero button {
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
-.feature-item {
-    background: #ddd;
-    padding: 20px;
-    width: 30%;
-    border-radius: 8px;
+/* Services */
+.services {
+  padding: 80px 20px;
+  text-align: center;
 }
 
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* About */
+.about {
+  background: #0a1f44;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Contact */
 .contact {
-    background: #eee;
-    padding: 40px;
-    text-align: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-form input {
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
-    width: 80%;
+form input, form textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
 }
 
 form button {
-    padding: 10px 20px;
+  background: #0a1f44;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #081633;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }

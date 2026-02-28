@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>เว็บไซต์ของฉัน</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Theme</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>สวัสดี GitHub Pages!</h1>
-    <p>นี่คือเว็บแรกของฉัน</p>
+
+<!-- Navbar -->
+<header class="navbar">
+    <h1 class="logo">My Business</h1>
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to Our Business</h2>
+    <p>We help you grow your business online.</p>
+    <button onclick="alert('Contact us!')">Get Started</button>
+</section>
+
+<!-- Features -->
+<section id="features" class="features">
+    <h3>Our Features</h3>
+    <div class="feature-list">
+        <div class="feature-item">Feature 1</div>
+        <div class="feature-item">Feature 2</div>
+        <div class="feature-item">Feature 3</div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h3>Contact Us</h3>
+    <form>
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Your email">
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+
+import React from 'react';
+
+const policies = [
+  {
+    title: "Educational Integrity",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+      </svg>
+    ),
+    content: "We uphold the highest standards of academic honesty and research transparency. Our scholars are required to cite all primary sources and adhere to the classical methodology of Isnad (chain of transmission)."
+  },
+  {
+    title: "Inclusive Community",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    content: "An-nahdah is an open school for all seekers of knowledge. We prohibit discrimination based on ethnicity, gender, or background, fostering a safe environment for intellectual growth and dialogue."
+  },
+  {
+    title: "Sustainability & Ethics",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+      </svg>
+    ),
+    content: "Our operations are guided by the principle of Amanah (trust). We utilize sustainable resources and ensure that all financial contributions are used ethically to support research and student grants."
+  }
+];
+
+const Policies: React.FC = () => {
+  return (
+    <section id="policies" className="py-24 bg-gray-900 text-white overflow-hidden relative">
+      <div className="absolute top-0 right-0 p-24 opacity-10 pointer-events-none">
+         <svg className="w-96 h-96" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100 0L130 70H200L145 115L170 185L100 145L30 185L55 115L0 70H70L100 0Z" />
+         </svg>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-annahdah-gold uppercase tracking-widest font-bold mb-4">Governance</h2>
+          <h3 className="text-4xl font-bold serif-font mb-6">Our Foundational Policies</h3>
+          <div className="w-24 h-1 bg-annahdah-gold mx-auto"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {policies.map((p, idx) => (
+            <div key={idx} className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-annahdah-gold transition-all duration-300">
+              <div className="text-annahdah-gold mb-6">{p.icon}</div>
+              <h4 className="text-xl font-bold serif-font mb-4">{p.title}</h4>
+              <p className="text-gray-400 leading-relaxed text-sm">
+                {p.content}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 p-10 bg-annahdah-green/20 rounded-3xl border border-annahdah-green/40 text-center">
+          <p className="text-lg italic text-gray-300">
+            "Knowledge without ethics is like a tree without fruit." 
+            <br />
+            <span className="text-annahdah-gold font-bold mt-2 inline-block">— Academy Creed</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Policies;
